@@ -42,7 +42,6 @@ export default function App() {
 
     return `${String(mins).padStart(2, "0")}:${String(secs).padStart(2, "0")}`;
   }
-
   // SOLVE
   async function handleSolve() {
     if (isSolving || isCompleted) return;
@@ -71,7 +70,6 @@ export default function App() {
       setStatus("Solved Successfully 🎉");
     }
   }
-
   // PAUSE / RESUME
   function handlePause() {
     if (!isSolving) return;
@@ -85,7 +83,6 @@ export default function App() {
       setStatus("Resuming AI Solving...");
     }
   }
-
   // STOP
   function handleStop() {
     stopRef.current = true;
@@ -94,7 +91,6 @@ export default function App() {
     setActiveCell(null);
     setStatus("Stopped");
   }
-
   // RESET
   function handleReset() {
     if (isSolving) return;
@@ -199,10 +195,8 @@ export default function App() {
               );
             })
           )}
-
         </div>
       </div>
-
     </div>
   );
 }
