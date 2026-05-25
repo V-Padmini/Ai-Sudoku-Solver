@@ -135,7 +135,7 @@ export default function App() {
           </div>
 
           <div className="controls">
-            <button onClick={handleSolve}disabled={ (isSolving &&!isPaused) || isCompleted }>{isPaused ? "Paused" : isSolving ? "Solving..." : "Start Solving"}</button>
+            <button onClick={handleSolve}disabled={ isSolving || isCompleted }>{isPaused ? "Paused" : isSolving ? "Solving..." : "Start Solving"}</button>
             <button onClick={handlePause} disabled={!isSolving ||isCompleted}>{isPaused ? "Resume":"Pause"}</button>
             <button onClick={handleStop} disabled={!isSolving || isCompleted}>Stop</button>
             <button onClick={ handleReset } disabled={isSolving}> Reset </button>
